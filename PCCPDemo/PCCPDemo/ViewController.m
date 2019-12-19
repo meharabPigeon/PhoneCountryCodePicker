@@ -30,6 +30,7 @@
     }];
     [vc setIsUsingChinese:[_langSwitch selectedSegmentIndex] == 1];
     UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    naviVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:naviVC animated:YES completion:NULL];
 }
 

@@ -189,9 +189,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellIdentifier"];//[tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    
+    cell.preservesSuperviewLayoutMargins = NO;
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellIdentifier"];
     }
     if (_PCCs) {
         NSDictionary * countryDic = [_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row];
@@ -202,6 +207,7 @@
             [[cell textLabel] setText:countryDic[@"country_en"]];
         }
         [[cell imageView] setImage:[PCCPViewController imageForCountryCode:countryDic[@"country_code"]]];
+        [[cell detailTextLabel] setText:[NSString stringWithFormat:@"+%@",countryDic[@"phone_code"]]];
         return cell;
     }
     return cell;;

@@ -177,7 +177,6 @@
 				DFCBC6191B05909100A4642E /* Sources */,
 				DFCBC61A1B05909100A4642E /* Frameworks */,
 				DFCBC61B1B05909100A4642E /* Resources */,
-				F5C9A9ED0B8FEF5CEFE1FFBD /* [CP] Embed Pods Frameworks */,
 				5E26DEDFEC3B4C1740FEC7D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -273,7 +272,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh",
 				"${PODS_ROOT}/Phone-Country-Code-and-Flags/Phone-Country-Code-and-Flags.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -282,22 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5C9A9ED0B8FEF5CEFE1FFBD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
